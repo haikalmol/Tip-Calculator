@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <meta name="description" content="Tip calculator app" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="preload" href="css/style.min.css" as="style" />
+    <link rel="stylesheet" href="css/style.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header">
+        <img src="./images/logo.svg" width="87" height="54" alt="logo" />
+      </div>
+    </header>
+
+    <main>
+      <form action="" autocomplete="off">
+        <div class="calculator-main">
+          <div class="calculator-first">
+            <div class="calculator-input container">
+              <label class="label-bill font-b color-n2" for="bill">Bill</label>
+              <img src="./images/icon-dollar.svg" width="11" height="17" alt="" />
+              <input type="number" name="bill" id="bill" required />
+            </div>
+            <fieldset class="select-options container">
+              <legend class="font-b color-n2">Select Tip %</legend>
+              <div class="calculator-options font-b">
+                <input type="radio" name="option" value="option5" id="option5" checked />
+                <label for="option5">5%</label>
+                <input type="radio" name="option" value="option10" id="option10" />
+                <label for="option10">10%</label>
+                <input type="radio" name="option" value="option15" id="option15" />
+                <label for="option15">15%</label>
+                <input type="radio" name="option" value="option25" id="option25" />
+                <label for="option25">25%</label>
+                <input type="radio" name="option" value="option50" id="option50" />
+                <label for="option50">50%</label>
+                <div class="input-custom">
+                  <label for="custom"></label>
+                  <input type="number" name="custom" id="custom" placeholder="Custom" />
+                </div>
+              </div>
+            </fieldset>
+            <div class="calculator-input container">
+              <label class="label-people font-b color-n2" for="people">Number of People</label>
+              <img src="./images/icon-person.svg" width="13" height="16" alt="" />
+              <input type="number" name="people" id="people" min="0" step="1" required />
+            </div>
+          </div>
+          <div class="result">
+            <div class="result-text">
+              <div class="amount">
+                <div>
+                  <h2 class="color-n6 font-b">Tip Amount</h2>
+                  <span class="color-n4 font-b">/ person</span>
+                </div>
+                <p class="color-p1 font-b">$0.00</p>
+              </div>
+              <div class="total">
+                <div>
+                  <h2 class="color-n6 font-b">Total</h2>
+                  <span class="color-n4 font-b">/ person</span>
+                </div>
+                <p class="color-p1 font-b">$0.00</p>
+              </div>
+            </div>
+            <div class="button-reset">
+              <button type="button" class="color-n1 font-b blocked" disabled>Reset</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <div class="attribution font-s">
+        <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" rel="noreferrer noopener" target="_blank">Frontend Mentor</a>.</p>
+        <p>Coded by <a href="https://github.com/joaovictorperes?tab=overview&from=2022-02-01&to=2022-02-09" rel="noreferrer noopener" target="_blank">Haikal Mol</a>.</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

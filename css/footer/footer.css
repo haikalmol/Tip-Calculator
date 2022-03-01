@@ -1,0 +1,48 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  background-color: var(--color-n6);
+  padding-top: 30px;
+  padding-bottom: 40px;
+  animation: showAt 2s forwards;
+}
+
+.attribution a {
+  color: var(--color-n5);
+  background-color: var(--color-n1);
+  display: inline-block;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+@keyframes showAt {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (min-width: 451px) and (max-width: 950px) {
+  .attribution {
+    border-radius: 0px 0px 20px 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 951px) {
+  .attribution {
+    background: none;
+  }
+}
+
+@media (min-height: 1040px) {
+  .attribution {
+    border-radius: 0px 0px 20px 20px;
+    margin-bottom: 20px;
+    background: none;
+  }
+}

@@ -1,0 +1,255 @@
+.calculator-main {
+  animation: show 2s forwards;
+  background-color: var(--color-n6);
+  border-radius: 20px 20px 0px 0px;
+  display: grid;
+  gap: 30px;
+}
+
+.calculator-first {
+  display: grid;
+  gap: 30px;
+}
+
+.calculator-input {
+  position: relative;
+}
+
+.calculator-input input {
+  height: 55px;
+}
+
+.calculator-input:first-child {
+  margin-top: 30px;
+}
+
+.calculator-input label {
+  font-size: 1.1rem;
+  letter-spacing: normal;
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.calculator-input img {
+  position: absolute;
+  top: 45px;
+  left: 46px;
+}
+
+.select-options legend {
+  font-size: 1.1rem;
+}
+
+.calculator-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.calculator-options label:not(label[for="custom"]) {
+  display: grid;
+  background-color: var(--color-n1);
+  color: var(--color-n6);
+  border-radius: 4px;
+  max-width: 150px;
+  box-sizing: border-box;
+  padding: 15px 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.calculator-options input:checked + label {
+  background-color: var(--color-p1);
+  color: var(--color-n1);
+}
+
+.calculator-input .zero-negative:focus {
+  border: solid 3px red;
+}
+
+.calculator-options .input-custom {
+  background: none;
+  padding: 0px;
+}
+
+.calculator-options .input-custom input::placeholder {
+  text-align: center;
+}
+
+.result {
+  background-color: var(--color-n1);
+  border-radius: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+.result h2 {
+  font-size: 0.9rem;
+}
+
+.result span {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.85rem;
+}
+
+.result p {
+  font-size: 2rem;
+  max-width: 200px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.result p::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.result p::-webkit-scrollbar-track {
+  background-color: var(--color-n1);
+}
+
+.result p::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to right, var(--color-p1), transparent);
+  box-shadow: inset 0 0 2px var(--color-p1);
+  border-radius: 4px;
+}
+
+.amount,
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.amount + .total {
+  margin-top: 30px;
+}
+
+.button-reset {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.button-reset button {
+  width: 100%;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 4px;
+  padding: 16px;
+  background-color: var(--color-p1);
+  cursor: pointer;
+}
+
+.button-reset button:hover {
+  background-color: var(--color-n4);
+}
+
+.button-reset button.blocked {
+  background-color: rgba(84, 221, 226, 0.219);
+  color: var(--color-n1);
+  cursor: not-allowed;
+}
+
+@media (min-width: 350px) and (max-width: 951px) {
+  .calculator-options label:not(label[for="custom"]) {
+    max-width: 200px;
+    padding: 15px 10px;
+  }
+
+  .input-custom input {
+    padding: 7px 16px;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (min-width: 451px) and (max-width: 951px) {
+  body {
+    margin: 0 auto;
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 951px) {
+  body {
+    margin: 0px auto;
+    max-width: 1000px;
+  }
+
+  .calculator-main {
+    margin: 0px 30px;
+    padding: 30px;
+    border-radius: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .calculator-first {
+    padding: 15px;
+    gap: 40px;
+  }
+
+  .calculator-input:first-child {
+    margin-top: 0px;
+  }
+
+  .calculator-input img {
+    position: absolute;
+    top: 45px;
+    left: 18px;
+  }
+
+  .calculator-options {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .input-custom input {
+    padding: 7px 16px;
+  }
+
+  .result {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+
+  .amount + .total {
+    margin-top: 50px;
+  }
+
+  .result p {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-height: 1040px) {
+  .calculator-main {
+    border-radius: 20px;
+  }
+}

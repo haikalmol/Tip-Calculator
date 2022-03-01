@@ -1,0 +1,46 @@
+input {
+  background-color: var(--color-n5);
+  border: 3px solid var(--color-n5);
+  color: var(--color-n1);
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 4px 16px;
+  text-align: right;
+  font: var(--font-b);
+  cursor: pointer;
+}
+
+input:hover {
+  box-shadow: 0px 0px 3px var(--color-p1);
+}
+
+input:focus {
+  box-shadow: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input:focus {
+  border: 3px solid var(--color-p1);
+}
+
+.container {
+  padding: 0px 30px;
+}
+
+@media (min-width: 951px) {
+  .container {
+    padding: 0px;
+  }
+}

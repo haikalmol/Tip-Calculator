@@ -1,0 +1,12 @@
+:root {
+  --font-s: 400 1rem/1 "Space Mono", sans-serif;
+  --font-b: 700 1.3rem/1 "Space Mono", sans-serif;
+}
+
+.font-s {
+  font: var(--font-s);
+}
+
+.font-b {
+  font: var(--font-b);
+}

@@ -1,0 +1,14 @@
+/*Utility*/
+@import "./global/global.css";
+@import "./utility/colors.css";
+@import "./utility/components.css";
+@import "./utility/fonts.css";
+
+/*Header*/
+@import "./global/header.css";
+
+/*Main*/
+@import "./main/calculator.css";
+
+/*Footer*/
+@import "./footer/footer.css";
